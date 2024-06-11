@@ -1,0 +1,214 @@
+@font-face {
+font-family: "togalite", sans-serif;
+font-weight: 100;
+font-style: normal;
+}
+@font-face {
+font-family: "togalite", sans-serif;
+font-weight: 300;
+font-style: normal;
+}
+@font-face {
+font-family: "togalite", sans-serif;
+font-weight: 400;
+font-style: normal;
+}
+@font-face {
+font-family: "togalite", sans-serif;
+font-weight: 500;
+font-style: normal;
+}
+@font-face {
+font-family: "togalite", sans-serif;
+font-weight: 600;
+font-style: normal;
+}
+@font-face {
+font-family: "togalite", sans-serif;
+font-weight: 700;
+font-style: normal;
+}
+@font-face {
+font-family: "togalite", sans-serif;
+font-weight: 800;
+font-style: normal;
+}
+
+.noto-serif-kr-<uniquifier> {
+  font-family: "Noto Serif KR", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+*{  box-sizing: border-box;
+    margin,padding: 0;
+}
+body {
+    display: block;
+    margin: 0;
+    background-color: red;
+    font-family: "togalite","Noto Serif KR", serif;
+}
+a {
+    color: black;
+}
+
+p { font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 1.7;
+    text-align: center;
+    width: 100%;
+    word-break: keep-all;
+}
+.container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+}
+
+.left {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+}
+
+.left img {
+    width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    border: 1px solid #ddd;
+    border-radius: 0px;
+}
+
+.right {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.right input[type="radio"] {
+    display: none;
+}
+
+.right label {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 0px;
+    overflow: hidden;
+}
+
+.right label img {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease;
+}
+
+.right input[type="radio"]:checked + label img {
+    transform: scale(1.1);
+}
+
+
+
+
+
+
+
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: calc(100% / 5);
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid #c5c5c5 ;
+    border-bottom: 1px solid #c5c5c5 ;
+    border-left: 0px;
+    line-height: 13px;
+}
+
+.home {
+    background-color: #c5c5c5 ;
+}
+
+.shin {
+    top: calc(100% / 5);
+}
+
+.shin:hover {
+    background-color: white ;
+    color: red;
+}
+
+.brc {
+    top: calc(2 * (100% / 5));
+    border-top: 0px;
+}
+
+.brc:hover {
+    background-color: white ;
+    color: red;
+}
+
+.up {
+  background-color: white ;
+    color: red;
+    top: calc(3 * (100% / 5));
+    border-top: 0px;
+}
+
+.up:hover {
+    background-color: white ;
+    color: red;
+}
+
+.under {
+    top: calc(4 * (100% / 5));
+}
+
+.under:hover {
+    background-color: white ;
+    color: red;
+}
+.content {
+    position: fixed;
+    left: 150px;
+    top: 0;
+    width: calc(100% - 150px);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding-top: 10px;
+    padding-left: 20px;
+    overflow: auto;
+}
+
+@media screen and (max-width: 700px) {
+     body {
+        font-size: 9pt;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .home, .shin, .brc, .up, .under,.spot {
+        width: 200px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .content {
+        width: calc(100% - 100px);
+        left: 200px;
+    }
+}
